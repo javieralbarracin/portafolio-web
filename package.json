@@ -1,6 +1,9 @@
 {
   "name": "portafolio-web",
   "version": "0.0.0",
+  "author": "Javi - easy code",
+  "description": "Este es un portfolio para exponer de forma web mis prácticas",
+  "homepage": "https://javieralbarracin.github.io/portafolio-web",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -8,7 +11,7 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "predeploy": "ng build --base-href ./",
-    "deploy": "gh-pages -d dist/portfolio-web"
+    "deploy": "gh-pages -d dist/portafolio-web"
   },
   "private": true,
   "dependencies": {

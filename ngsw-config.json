@@ -38,7 +38,7 @@
       "urls": [
         "https://api.github.com/users/javieralbarracin/repos",
         "https://raw.githubusercontent.com/wiki/javieralbarracin",
-        "https://api.github.com/repos/javieralbarracin/template-admin-pro"
+        "https://api.github.com/repos/javieralbarracin/portafolio-web"
       ],
       "cacheConfig": {
         "strategy": "freshness",
