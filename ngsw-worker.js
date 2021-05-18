@@ -2534,7 +2534,7 @@ ${msgIdle}`, { headers: this.adapter.newHeaders({ 'Content-Type': 'text/plain' }
                     // The latest manifest is broken. This means that new clients are at the mercy of the
                     // network, but caches continue to be valid for previous versions. This is
                     // unfortunate but unavoidable.
-                    this.state = DriverReadyState.EXISTING_CLIENTS_ONLY;
+                    //this.state = DriverReadyState.EXISTING_CLIENTS_ONLY;
                     this.stateMessage = `Degraded due to: ${errorToString(err)}`;
                     // Cancel the binding for the affected clients.
                     affectedClients.forEach(clientId => this.clientVersionMap.delete(clientId));
