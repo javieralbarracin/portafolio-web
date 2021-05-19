@@ -6,7 +6,7 @@ import {map, tap} from 'rxjs/operators';
   providedIn: 'root'
 })
 export class YoutubeService {
-  private readonly url = 'https://youtube.googleapis.com/youtube/v3/playlists?key=AIzaSyBhJMJQTU1lR7sSOV7A9VF0w2fgihBdiKk';
+  private readonly url = 'https://youtube.googleapis.com/youtube/v3/playlists?key=yourKey';
 
   constructor(private httpModule: HttpClient) {
   }
