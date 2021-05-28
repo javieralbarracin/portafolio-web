@@ -6,14 +6,22 @@
     Me apasionan las tecnologías, también me gustaría crear contenido en Youtube, como una forma de aportar humildemente a la comunidad
     determinadas experiencias
   </p>
-
-  <div class="video-wrapper animate__animated animate__fadeInUp animation-7">
+  <div class="avatar-wrapper animate__animated animate__fadeInUp animation-7">
     <hr>
-    <!-- <iframe width="100%" height="315" src="https://www.youtube.com/embed/05rP763gCuo" frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen></iframe> -->
+    <ng-container *ngIf="errorLoadPhoto; else elseTemplate">
+      <img id="myimage" class="img-circle" [src]='imageError' />
+    </ng-container>
+    <ng-template #elseTemplate>
+        <img id="myimage" class="img-circle" [src]='imageUrl' />    
+    </ng-template>
   </div>
-
+  <!-- <div class="video-wrapper animate__animated animate__fadeInUp animation-7">
+    <hr>
+    <iframe width="100%" height="315" src="https://www.youtube.com/embed/05rP763gCuo" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>    
+  </div> -->
+  
   <div class="link-wrapper animate__animated animate__fadeInUp animation-8">
     <hr>
     <div class="links d-flex flex-wrap">

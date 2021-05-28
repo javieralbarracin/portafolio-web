@@ -1,4 +1,5 @@
 import { AfterViewInit, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { DomSanitizer, SafeUrl } from '@angular/platform-browser';
 import { LinkSocialMediaModel } from '@core/models/link-social-media.model';
 import { GithubService } from '@core/services/github.service';
 import Typewriter from 't-writer.js';
@@ -15,14 +16,33 @@ export class SidebarComponent implements OnInit, AfterViewInit {
   links: Array<LinkSocialMediaModel> = linksSocialMedia
   dataProfile: any;
 
-  constructor(private gitHubService: GithubService) {
+  avatarGit: any='assets/avatars/user.jpg';
+  //image:any
+  imageError:any='assets/avatars/user.jpg'
+  public image?:Blob;
+  public imageUrl?:SafeUrl;
+  errorLoadPhoto:boolean=true
+
+  constructor(private gitHubService: GithubService, private sanitizer: DomSanitizer) {
   }
 
   ngOnInit(): void {
     this.gitHubService.getRepo()
       .subscribe( ( res:any ) => this.dataProfile = res);
+    this.loadAvatar();
   }
 
+  loadAvatar(){
+    this.gitHubService.loadAvatar().subscribe(avatar =>{
+      this.image = avatar
+      this.imageUrl = this.sanitizer.bypassSecurityTrustUrl(URL.createObjectURL(this.image))
+      //console.log('avatar-->',avatar)
+      this.errorLoadPhoto=false
+    },catchError=>{
+      this.errorLoadPhoto=true
+      console.log(catchError)
+    })   
+  }
   ngAfterViewInit(): void {
     this.initEffect();
   }

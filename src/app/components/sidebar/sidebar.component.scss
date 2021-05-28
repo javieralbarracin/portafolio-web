@@ -42,8 +42,19 @@
     pointer-events: none;
     transition: all ease 150ms;
   }
+ 
 }
+.avatar-wrapper{
+  position: relative;
 
+  &:hover:before {
+    background-color: transparent;
+  }
+  .img-circle {
+    border-radius: 4%;
+    width: -moz-available;
+  }
+}
 .footer-copy {
   padding: .75rem .25rem;
   text-align: center;
