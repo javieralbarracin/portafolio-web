@@ -1,11 +1,11 @@
 {
   "name": "portafolio-web",
   "short_name": "portafolio-web",
-  "theme_color": "#1976d2",
-  "background_color": "#1976d2",
+  "theme_color": "#fff",
+  "background_color": "#fff",
   "display": "standalone",
-  "scope": "./",
-  "start_url": "./",
+  "scope": "/",
+  "start_url": "/",
   "icons": [
     {
       "src": "assets/icons/icon-72x72.png",
@@ -26,7 +26,7 @@
       "purpose": "maskable any"
     },
     {
-      "src": "assets/icons/icon-144x144.png",
+      "src": "icons/icon-144x144.png",
       "sizes": "144x144",
       "type": "image/png",
       "purpose": "maskable any"

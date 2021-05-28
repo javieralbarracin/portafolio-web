@@ -10,8 +10,25 @@
   box-shadow: 0 0 29px #3c3c3c6b;
 
 }
-
+.section-1 {
+  .logo{
+    background-color: aliceblue;
+    border-radius: 7%;
+    .logo-img{
+      width: auto;
+      height: 3.5em;
+    }
+  }
+}
 .section-2 {
+  .logo{
+    background-color: aliceblue;
+    border-radius: 7%;
+    .logo-img{
+      width: auto;
+      height: 3.5em;
+    }
+  }
   .list-menu {
     list-style: none;
     margin: 0;
